@@ -9,6 +9,7 @@
   font-weight: 600;
   color: white;
   background-color: #009281;
+  text-align: left;
 }
 
 .ats-locations {
@@ -47,4 +48,5 @@
 
 .ats-data-row td {
   padding: 0.625rem;
+  border: 0.063rem solid #ECEFF4;
 }
