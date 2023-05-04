@@ -4,7 +4,7 @@
   overflow: scroll;
 }
 
-.ats-head th {
+.jobs-table-header th {
   padding: 0.625rem;
   font-weight: 600;
   color: white;
@@ -12,15 +12,15 @@
   text-align: left;
 }
 
-.ats-locations {
+.locations {
   width: 60%;
 }
 
-.ats-title {
+.title {
   width: 40%;
 }
 
-.ats-table {
+.jobs-table {
   border-collapse: collapse;
   border-spacing: 0 0.938rem;
   width: 80%;
@@ -28,25 +28,16 @@
   margin: auto;
 }
 
-.public-table-heading {
-  font-size: 1.25rem;
-  background-color: #0c3a53;
-  white-space: nowrap;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #ffffff;
+.jobs-data-row td {
+  padding: 0.625rem;
+  border: 0.063rem solid #e6e8ed;
 }
 
-.ats-data-row:hover {
+.jobs-data-row:hover {
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2);
   border: 0.063rem solid rgba(0,0,0,0);
   border-radius: 0.75rem;
   background: #fff;
   cursor: pointer;
   scale: 1.01;
-}
-
-.ats-data-row td {
-  padding: 0.625rem;
-  border: 0.063rem solid #ECEFF4;
 }
