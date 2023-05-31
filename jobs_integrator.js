@@ -24,14 +24,14 @@ class JobRenderService {
                 td.innerHTML = job[key]
                 tr.appendChild(td)
             })
-            tr.setAttribute('onClick', `window.open("http://${this.#company}.localhost:3000/public/jobs/${job.id}")`)
+            tr.setAttribute('onClick', `window.open("http://${this.#company}.ats.maplehr.io/public/jobs/${job.id}")`)
             table.appendChild(tr)
         })
         document.getElementById('embedATSWidget').appendChild(table)
     }
 
     static #fetchAndRenderJobs = () => {
-      return fetch(`http://${this.#company}.localhost:3000/api/v1/jobs`, {
+      return fetch(`http://${this.#company}.ats.maplehr.io/api/v1/jobs`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
