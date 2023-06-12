@@ -24,7 +24,7 @@ class JobRenderService {
                 td.innerHTML = job[key]
                 tr.appendChild(td)
             })
-            tr.setAttribute('onClick', `window.open("http://${this.#company}.ats.maplehr.io/public/jobs/${job.id}")`)
+            tr.setAttribute('onClick', `window.open("https://${this.#company}.ats.maplehr.io/public/jobs/${job.id}")`)
             table.appendChild(tr)
         })
         document.getElementById('embedATSWidget').appendChild(table)
