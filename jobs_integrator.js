@@ -38,7 +38,7 @@
     }
 
     static #fetchAndRenderJobs = () => {
-      return fetch(`http://${this.#company}.ats.maplehr.io/api/v1/jobs`, {
+      return fetch(`https://${this.#company}.ats.maplehr.io/api/v1/jobs`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
