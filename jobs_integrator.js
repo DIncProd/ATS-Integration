@@ -1,6 +1,6 @@
   class JobRenderService {
 	static #company = document.currentScript.getAttribute('company')
-  static #color = document.currentScript.getAttribute('color')
+  	static #color = document.currentScript.getAttribute('color')
 
     static #renderJobs = (jobs) => {
 
