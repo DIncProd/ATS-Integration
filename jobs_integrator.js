@@ -53,5 +53,3 @@
 }
 
 JobRenderService.start()
-
-JobRenderService.start()
