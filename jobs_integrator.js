@@ -1,7 +1,13 @@
-class JobRenderService {
+  class JobRenderService {
 	static #company = document.currentScript.getAttribute('company')
+  static #color = document.currentScript.getAttribute('color')
 
     static #renderJobs = (jobs) => {
+
+        if (this.#color) {
+          let styleElem = document.querySelector('style') || document.head.appendChild(document.createElement("style"))
+          styleElem.innerHTML += `tr.jobs-data-row td:last-child:after { background-color: ${this.#color} !important; }`;
+        }
         const headers = ['Title', 'Locations']
         const div = document.createElement('div')
         div.classList.add('ats-div')
@@ -12,6 +18,7 @@ class JobRenderService {
         headers.forEach(header => {
             let th = document.createElement('th')
             th.innerHTML = header
+            if (this.#color) th.style.backgroundColor = this.#color
             th.classList.add(`${header.toLowerCase()}`)
             tr.appendChild(th)
         })
@@ -44,5 +51,7 @@ class JobRenderService {
     	this.#fetchAndRenderJobs().then(response => this.#renderJobs(response.jobs))
     }
 }
+
+JobRenderService.start()
 
 JobRenderService.start()
